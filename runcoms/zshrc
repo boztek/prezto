@@ -11,3 +11,25 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+export PATH=~/.composer/vendor/bin:$PATH
+
+# Keys / tokens
+source ~/.dotfiles/private/api_keys/.keys
+
+#export EDITOR=vim
+export VISUAL=vim
+export EDITOR=vim
+
+# Node environemnts
+export NODENV_ROOT=/usr/local/var/nodenv
+if which nodenv > /dev/null; then eval "$(nodenv init -)"; fi
+
+#unalias run-help
+#autoload run-help
+#HELPDIR=/usr/local/share/zsh/help
+
+eval "$(rbenv init -)"
+
+alias ll="ls -l"
+alias emacs="~/Applications/Emacs.app/Contents/MacOS/Emacs -nw"
+alias veracrypt='/Applications/Veracrypt.app/Contents/MacOS/Veracrypt --text'
