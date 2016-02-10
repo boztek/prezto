@@ -6,11 +6,11 @@
 #
 
 # Mount secure volume if it exists
+alias veracrypt='/Applications/Veracrypt.app/Contents/MacOS/Veracrypt --text'
 if [[ -d "$HOME/.dofiles/private" ]]; then
-  echo "No secure volume mounted."
-  if [[ -s "$HOME/.dotfiles/private.vc" ]]; then
-    veracrypt ~/.dotfiles/private.vc ~/.dotfiles/private/
-  fi
+  echo "Secure volume mounted."
+elif [[ -s "$HOME/.dotfiles/private.vc" ]]; then
+  veracrypt ~/.dotfiles/private.vc ~/.dotfiles/private/ >/dev/null
 fi
 
 # Source Prezto.
