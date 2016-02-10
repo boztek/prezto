@@ -5,6 +5,14 @@
 #   Sorin Ionescu <sorin.ionescu@gmail.com>
 #
 
+# Mount secure volume if it exists
+if [[ -d "$HOME/.dofiles/private" ]]; then
+  echo "No secure volume mounted."
+  if [[ -s "$HOME/.dotfiles/private.vc" ]]; then
+    veracrypt ~/.dotfiles/private.vc ~/.dotfiles/private/
+  fi
+fi
+
 # Source Prezto.
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
