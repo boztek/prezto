@@ -25,6 +25,9 @@ export PATH=~/.composer/vendor/bin:$PATH
 
 # Keys / tokens
 source ~/.dotfiles/private/api_keys/.keys
+if [[ -s "$HOME/.dotfiles/private/misc/backup/PBACKUP" ]]; then
+  export BORG_PASSPHRASE=`cat $HOME/.dotfiles/private/misc/backup/PBACKUP`
+fi
 
 #export EDITOR=vim
 export VISUAL=vim
