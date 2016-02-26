@@ -49,3 +49,4 @@ alias bom='bower cache clean && rm -rf bower_components && mkdir bower_component
 
 alias ll="ls -l"
 alias emacs="~/Applications/Emacs.app/Contents/MacOS/Emacs -nw"
+[ -f $HOME/.aliases ] && source $HOME/.aliases
