@@ -44,9 +44,4 @@ if which nodenv > /dev/null; then eval "$(nodenv init -)"; fi
 
 eval "$(rbenv init -)"
 
-alias nom='npm cache clean && rm -rf node_modules && mkdir node_modules && touch node_modules/.metadata_never_index && npm install'
-alias bom='bower cache clean && rm -rf bower_components && mkdir bower_components && touch bower_components/.metadata_never_index && bower install'
-
-alias ll="ls -l"
-alias emacs="~/Applications/Emacs.app/Contents/MacOS/Emacs -nw"
 [ -f $HOME/.aliases ] && source $HOME/.aliases
