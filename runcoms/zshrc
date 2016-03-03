@@ -11,7 +11,8 @@ if [[ -d "$HOME/.dotfiles/private" ]]; then
   echo ""
 else
   if [[ -s "$HOME/.dotfiles/private.vc" ]]; then
-    veracrypt ~/.dotfiles/private.vc ~/.dotfiles/private/
+    # veracrypt $HOME/.dotfiles/private.vc $HOME/.dotfiles/private/
+    veracrypt --pim=485 -k "" --protect-hidden='no' $HOME/.dotfiles/private.vc $HOME/.dotfiles/private/
   fi
 fi
 
