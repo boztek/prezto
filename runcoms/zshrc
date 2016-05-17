@@ -15,6 +15,7 @@ else
     veracrypt --pim=485 -k "" --protect-hidden='no' $HOME/.dotfiles/private.vc $HOME/.dotfiles/private/
   fi
 fi
+alias privmnt='veracrypt --pim=485 -k "" --protect-hidden='no' $HOME/.dotfiles/private.vc $HOME/.dotfiles/private/'
 
 # Source Prezto.
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
