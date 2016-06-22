@@ -46,6 +46,8 @@ if which nodenv > /dev/null; then eval "$(nodenv init -)"; fi
 
 eval "$(rbenv init -)"
 
+export HOMEBREW_CASK_OPTS="--caskroom=/usr/local/Caskroom"
+
 source /usr/local/share/zsh/site-functions/_aws
 
 [ -f $HOME/.aliases ] && source $HOME/.aliases
