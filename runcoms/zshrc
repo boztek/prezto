@@ -15,7 +15,8 @@ alias veracrypt='/Applications/Veracrypt.app/Contents/MacOS/Veracrypt --text'
 #    veracrypt --pim=485 -k "" --protect-hidden='no' $HOME/.dotfiles/private.vc $HOME/.dotfiles/private/
 #  fi
 #fi
-alias privmnt='veracrypt --pim=485 -k "" --protect-hidden='no' $HOME/.dotfiles/private.vc $HOME/.dotfiles/private/'
+alias privrst='pushd $HOME/.dotfiles && git checkout -- private.vc && popd'
+alias privmnt='veracrypt --pim=485 -k "" --protect-hidden='no' $HOME/.dotfiles/private.vc $HOME/.dotfiles/private/ && privrst'
 alias privumnt='veracrypt -d $HOME/.dotfiles/private.vc'
 
 # Source Prezto.
