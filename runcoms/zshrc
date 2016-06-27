@@ -7,14 +7,14 @@
 
 # Mount secure volume if it exists
 alias veracrypt='/Applications/Veracrypt.app/Contents/MacOS/Veracrypt --text'
-if [[ -d "$HOME/.dotfiles/private" ]]; then
-  echo ""
-else
-  if [[ -s "$HOME/.dotfiles/private.vc" ]]; then
-    # veracrypt $HOME/.dotfiles/private.vc $HOME/.dotfiles/private/
-    veracrypt --pim=485 -k "" --protect-hidden='no' $HOME/.dotfiles/private.vc $HOME/.dotfiles/private/
-  fi
-fi
+#if [[ -d "$HOME/.dotfiles/private" ]]; then
+#  echo ""
+#else
+#  if [[ -s "$HOME/.dotfiles/private.vc" ]]; then
+#    # veracrypt $HOME/.dotfiles/private.vc $HOME/.dotfiles/private/
+#    veracrypt --pim=485 -k "" --protect-hidden='no' $HOME/.dotfiles/private.vc $HOME/.dotfiles/private/
+#  fi
+#fi
 alias privmnt='veracrypt --pim=485 -k "" --protect-hidden='no' $HOME/.dotfiles/private.vc $HOME/.dotfiles/private/'
 alias privumnt='veracrypt -d $HOME/.dotfiles/private.vc'
 
