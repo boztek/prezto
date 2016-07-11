@@ -5,20 +5,6 @@
 #   Sorin Ionescu <sorin.ionescu@gmail.com>
 #
 
-# Mount secure volume if it exists
-alias veracrypt='/Applications/Veracrypt.app/Contents/MacOS/Veracrypt --text'
-#if [[ -d "$HOME/.dotfiles/private" ]]; then
-#  echo ""
-#else
-#  if [[ -s "$HOME/.dotfiles/private.vc" ]]; then
-#    # veracrypt $HOME/.dotfiles/private.vc $HOME/.dotfiles/private/
-#    veracrypt --pim=485 -k "" --protect-hidden='no' $HOME/.dotfiles/private.vc $HOME/.dotfiles/private/
-#  fi
-#fi
-alias privrst='pushd $HOME/.dotfiles && git checkout -- private.vc && popd'
-alias privmnt='veracrypt --pim=485 -k "" --protect-hidden='no' $HOME/.dotfiles/private.vc $HOME/.dotfiles/private/ && privrst'
-alias privumnt='veracrypt -d $HOME/.dotfiles/private.vc'
-
 # Source Prezto.
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
