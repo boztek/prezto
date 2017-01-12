@@ -20,5 +20,3 @@ source /usr/local/share/zsh/site-functions/_aws
 source "$HOME/.console/console.rc" 2>/dev/null
 
 [ -f $HOME/.aliases ] && source $HOME/.aliases
-
-eval "$(rbenv init -)"
