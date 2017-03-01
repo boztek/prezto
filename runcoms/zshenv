@@ -17,6 +17,9 @@ fi
 
 export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
 export PATH=$HOME/.cargo/bin:$HOME/.composer/vendor/bin:$HOME/Library/Python/2.7/bin:$PATH
+export PATH="/usr/local/opt/icu4c/bin:$PATH"
+export PATH="/usr/local/opt/icu4c/sbin:$PATH"
+export PATH="/usr/local/opt/node@6/bin:$PATH"
 
 export VISUAL=vim
 export EDITOR=emacs
