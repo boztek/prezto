@@ -25,7 +25,7 @@ export PATH="/usr/local/opt/node@6/bin:$PATH"
 export VISUAL=vim
 export EDITOR=emacs
 
-# Node environemnts
+# Node environments
 export NODENV_ROOT=/usr/local/var/nodenv
 if which nodenv > /dev/null; then eval "$(nodenv init -)"; fi
 

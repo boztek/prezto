@@ -15,6 +15,10 @@ if [[ -s "$HOME/.dotfiles/private/api_keys/.keys" ]]; then
   source ~/.dotfiles/private/api_keys/.keys
 fi
 
+if [[ -s "/usr/local/bin/rbenv" ]]; then
+  eval "$(rbenv init -)"
+fi
+
 if [[ -s "/usr/local/share/zsh/site-functions/_aws" ]]; then
   source /usr/local/share/zsh/site-functions/_aws
 fi
